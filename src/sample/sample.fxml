@@ -1,8 +1,43 @@
-<?import javafx.geometry.Insets?>
-<?import javafx.scene.layout.GridPane?>
+<?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.Button?>
-<?import javafx.scene.control.Label?>
-<GridPane fx:controller="sample.Controller"
-          xmlns:fx="http://javafx.com/fxml" alignment="center" hgap="10" vgap="10">
+<?import javafx.scene.chart.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<GridPane alignment="center" hgap="10" vgap="10" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+    <children>
+        <AnchorPane prefHeight="627.0" prefWidth="578.0">
+            <children>
+                <TextField fx:id="curValue" layoutX="154.0" layoutY="51.0" />
+                <Button fx:id="Button1" layoutX="27.0" layoutY="14.0" mnemonicParsing="false" onAction="#startVNS3" text="GetData" />
+                <Label layoutX="115.0" layoutY="55.0" text="Ток" />
+                <Label layoutX="37.0" layoutY="85.0" text="Входное давление" />
+                <Label layoutX="32.0" layoutY="115.0" text="Выходное давление" />
+                <TextField fx:id="presInValue" layoutX="154.0" layoutY="81.0" />
+                <TextField fx:id="presOutValue" layoutX="154.0" layoutY="111.0" />
+                <Label layoutX="93.0" layoutY="147.0" text="Расход 1" />
+                <TextField fx:id="mh1Value" layoutX="154.0" layoutY="142.0" />
+                <TextField fx:id="mh2Value" layoutX="154.0" layoutY="173.0" />
+                <Label layoutX="93.0" layoutY="177.0" text="Расход 2" />
+                <TextField fx:id="mhSumValue" layoutX="154.0" layoutY="205.0" />
+                <Label layoutX="35.0" layoutY="209.0" text="Суммарный расход" />
+                <Button fx:id="clickGraph" layoutX="91.0" layoutY="14.0" mnemonicParsing="false" onAction="#click" text="Graph" />
+                <Label fx:id="dateTime" layoutX="201.0" layoutY="18.0" text="Date and Time" />
+                <LineChart fx:id="Graph1" layoutX="35.0" layoutY="245.0" prefHeight="373.0" prefWidth="494.0">
+                    <xAxis>
+                        <CategoryAxis side="BOTTOM" />
+                    </xAxis>
+                    <yAxis>
+                        <NumberAxis side="LEFT" />
+                    </yAxis>
+                </LineChart>
+            </children></AnchorPane>
+    </children>
+    <columnConstraints>
+        <ColumnConstraints />
+    </columnConstraints>
+    <rowConstraints>
+        <RowConstraints />
+    </rowConstraints>
+
 </GridPane>
